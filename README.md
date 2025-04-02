@@ -19,7 +19,7 @@ To get started with this PostgreSQL Docker setup, follow these steps:
 
 ## How to run docker file
 - docker build -t postgresql-docker .
-- docker run -d --name postgres-container -p 5432:5432 postgresql-docker
+- docker run --env-file .env -p 5432:5432 --name postgres_container_instance postgres_container
 
 ## Clean
 - docker-compose down --volumes
